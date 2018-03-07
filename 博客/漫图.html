@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>漫图</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        body,ul,ol,p,h1{margin: 0;}
+        ul,ol{list-style: none;}
+        a{text-decoration: none;outline: none;}
+        body{font-family: "圆体";}
+
+        /*#top{width: 1200px;height:120px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+         -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.5);
+
+        overflow: hidden;text-align: center;
+        background-color: white;
+         margin-left: -50%;}
+        #bty1{
+        margin: auto;margin-top:177px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        width: 1200px;height: 777px;
+        }
+
+        */
+
+        #head{width: 100%;height: 42px;background-color:black;}
+        .ttd{width: 1080px;height: 42px;margin: auto;background-color: black;}
+        #body_all{width: 1080px;height: auto;background-color: blanchedalmond;margin: auto;overflow: hidden;}
+        #body_all #body_left{width: 840px;height: 600px;background-color: cornflowerblue;float: left;}
+        #body_all #body_fix_right{width: 160px;height: 600px;background-color: darkslateblue;float: left;margin-left:40px; }
+        #body_all #body_left .body_left_img{width: 840px;height: 420px;background-color: darkcyan;}
+        #body_all #body_left .body_left_img .img{width: 720px;height: 360px;background-color: saddlebrown}
+        #body_all #body_left .body_left_img .img_alt{width: 720px;height: 40px;background-color: yellowgreen;}
+        #foot{width: 100%;height: 200px;background-color: black;}
+    </style>
+</head>
+<body>
+<div id="head">
+    <div class="ttd"></div>
+</div>
+<div id="body_all">
+    <div id="body_left">
+        <div class="body_left_img">
+            <div class="img" style="background: url(img/1.jpg) no-repeat center center;background-size: 100% 100%;"></div>
+            <div class="img_alt">xxxx</div>
+        </div>
+    </div>
+    <div id="body_fix_right"></div>
+</div>
+<div id="foot"></div>
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+</body>
+</html>

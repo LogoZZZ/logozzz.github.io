@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="cs" width="80" height="60" onmouseover="setin()">your browser does not support the canvas tag </canvas>
+    <script type="text/javascript">
+    var cvs=(function(){
+        var cs=document.getElementById('cs');
+        var cst=cs.getContext('2d');
+        cst.beginPath();
+        cst.strokeStyle='#f00';
+        cst.moveTo(40,0);
+        cst.lineTo(30,17.3);
+        cst.stroke();
+
+        cst.beginPath();
+        cst.strokeStyle='#f00';
+        cst.moveTo(40,0);
+        cst.lineTo(50,17.3);
+        cst.stroke();
+
+// cst.beginPath();
+//         cst.strokeStyle='#f00';
+//         cst.moveTo(50,17.3);
+//         cst.lineTo(60,34.6);
+//         cst.stroke();
+
+
+        cst.beginPath();
+        cst.strokeStyle='#f00';
+        cst.moveTo(10,51.9);
+        cst.lineTo(20,34.6);
+        cst.stroke();
+
+        cst.beginPath();
+        cst.strokeStyle='#f00';
+        cst.moveTo(10,51.9);
+        cst.lineTo(30,51.9);
+        cst.stroke();
+
+        cst.beginPath();
+        cst.strokeStyle='#f00';
+        cst.moveTo(70,51.9);
+        cst.lineTo(60,34.6);
+        cst.stroke();
+
+        cst.beginPath();
+        cst.strokeStyle='#f00';
+        cst.moveTo(70,51.9);
+        cst.lineTo(50,51.9);
+        cst.stroke();
+
+        
+    }())
+    function round(x,y){
+        var t=1;
+        for(y>0;t*=10;y--);
+        for(y<0;t/=10;y++);
+        return Math.round(x*t)/t;
+    }
+     var cs=document.getElementById('cs');
+        var cst=cs.getContext('2d');
+        var timer=null;
+        var x=0;
+        var z=0;
+        var setinfun=function(){
+            if(x<11){
+                x+=0.2;
+                z+=0.346;
+            }
+            cst.beginPath();
+        cst.strokeStyle='#f00';
+        cst.moveTo(40,0);
+        cst.lineTo(50+x,17.3+z);
+        cst.stroke();
+        }
+        var setin=function(){
+            clearInterval(timer);
+            timer=setInterval('setinfun()',10);
+        }
+    </script>
+</body>
+</html>

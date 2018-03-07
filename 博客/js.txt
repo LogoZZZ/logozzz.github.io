@@ -1,0 +1,43 @@
+
+    <!--<script type="text/javascript"> 
+    
+var timer=null;
+var x=470;
+var y=120;
+var timer2=null;
+function sd(){
+    if(x>120){x-=2.5;document.getElementById("top").style.height=x+"px";}
+};
+function sup(){
+    if(y<=470){y+=2.5;document.getElementById("top").style.height=y+"px";}
+}
+var scrolldown=function(e){ 
+
+e = e || window.event;
+        if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件             
+            if (document.documentElement.scrollTop || document.body.scrollTop==0 && e.wheelDelta > 0) {
+                 //当滑轮向上滚动时 
+                clearInterval(timer2);
+               timer2=setInterval('sup()',30);
+            }
+            if (document.documentElement.scrollTop || document.body.scrollTop>=200 && e.wheelDelta < 0) { //当滑轮向下滚动时
+            clearInterval(timer);
+                timer=setInterval('sd()',30);  
+            }
+        } else if (e.detail) {  //Firefox滑轮事件
+            if (document.documentElement.scrollTop || document.body.scrollTop==0 && e.detail> 0) { //当滑轮向上滚动时
+               timer2=setInterval('sup()',30);
+                clearInterval(timer2);
+            }
+            if (document.documentElement.scrollTop || document.body.scrollTop>=200 && e.detail< 0) { //当滑轮向下滚动时
+            clearInterval(timer);
+                 timer=setInterval('sd()',30);  
+            }
+        }
+}
+/*注册事件*/ 
+if(document.addEventListener){ 
+    document.addEventListener('DOMMouseScroll',scrolldown,false); 
+}//W3C 
+window.onmousewheel=document.onmousewheel=scrolldown;//IE/Opera/Chrome 
+</script>-->

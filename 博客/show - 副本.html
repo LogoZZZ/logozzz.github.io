@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <!--<script src="jquery-3.2.1.min.js"></script>-->
+    <style>
+        body,ul,ol,p,h1{margin: 0;}
+        ul,ol{list-style: none;}
+        a{text-decoration: none;}
+        body{background: #e1e1e1;}
+
+        #top{width: 1200px;height:120px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+         -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:  1px 1px 3px rgba(0, 0, 0, 0.5);
+
+        overflow: hidden;text-align: center;
+        background-color: white;
+         margin-left: -50%;}
+        #bty1{
+        margin: auto;margin-top:177px;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        width: 1200px;height: 777px;
+        }
+
+        
+    </style>
+</head>
+<body>
+<div id="top" style="position:absolute;top: 33px;left:50%;"></div>
+
+    <div id="bty1">
+
+    </div>
+    <div id="bty2">
+
+    </div>
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script>
+        $(function(){
+            $(window).on('scroll',function(){
+                if($(document).scrollTop()>=33){
+                   $("#top").css({position: 'fixed',top:'0'})
+                }if($(document).scrollTop()<33){$("#top").css({position:'absolute',top:'33px'})}
+                })
+        })
+    </script>
+
+</body>
+</html>

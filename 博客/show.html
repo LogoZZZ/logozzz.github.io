@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<script type="text/javascript" src="http://cdn.webfont.youziku.com/wwwroot/js/wf/youziku.api.min.js"></script>-->
+
+    <style>
+        body,ul,ol,p,h1{margin: 0;}
+        ul,ol{list-style: none;}
+        a{text-decoration: none;}
+
+        #top{width: 100%;background: white;position: fixed;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);overflow: hidden;}
+       
+        #head{
+            background-color: #e1e1e1;
+            border-bottom: 1px solid #e1e1e1;
+            width: 100%;height:300px;
+        }
+        #bty1{
+            background-color: white;
+            border-bottom: 1px solid #e1e1e1;
+            width: 100%;height: 500px;
+        }
+        #bty2{
+            background-color: rgb(201,189,108);
+            border-bottom: 1px solid #e1e1e1;
+            width: 100%;height: 500px;
+        }
+
+        #right-bottom{position: fixed;}
+        #right-bottom ul li{width: 30px;height: 30px;background-color: blueviolet;margin-top: 10px;position: absolute;}
+    </style>
+</head>
+<body>
+<div id="top" style="height:470px;"></div>
+
+    <div id="head">
+
+    </div>
+    <div id="bty1">
+
+    </div>
+    <div id="bty2">
+
+    </div>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!--<script type="text/javascript">
+    //字体
+   // $youziku.load("body", "e6b6daf074a749158d7b57a616c737e4", "Source-Han-Light");/*$youziku.load("#id1,.class1,h1", "e6b6daf074a749158d7b57a616c737e4", "Source-Han-Light");*//*．．．*/$youziku.draw();
+
+        // jq var timer=null;
+        // $(function(){
+        //     $(window).scroll(function(){
+        //         clearTimeout(timer);
+        //         timer=setTimeout(function(){if(document.documentElement.scrollTop || document.body.scrollTop>=180){
+        //            $("#top>img").stop();
+        //            $("#top>img").animate({top:"-100%"},"normal")
+        //         }if(document.documentElement.scrollTop || document.body.scrollTop<180){$("#top>img").stop();$("#top>img").animate({top:"0px"},"normal")}},10)
+        //     })
+        // })
+
+    </script>-->
+
+    <script type="text/javascript"> 
+    
+var timer=null;
+var x=470;
+var y=120;
+var timer2=null;
+function sd(){
+    if(x>120){x-=2.5;document.getElementById("top").style.height=x+"px";}
+};
+function sup(){
+    if(y<=470){y+=2.5;document.getElementById("top").style.height=y+"px";}
+}
+var scrolldown=function(e){ 
+
+e = e || window.event;
+        if (e.wheelDelta) {  //判断浏览器IE，谷歌滑轮事件             
+            if (document.documentElement.scrollTop || document.body.scrollTop==0 && e.wheelDelta > 0) {
+                 //当滑轮向上滚动时 
+                clearInterval(timer2);
+               timer2=setInterval('sup()',30);
+            }
+            if (document.documentElement.scrollTop || document.body.scrollTop>=200 && e.wheelDelta < 0) { //当滑轮向下滚动时
+            clearInterval(timer);
+                timer=setInterval('sd()',30);  
+            }
+        } else if (e.detail) {  //Firefox滑轮事件
+            if (document.documentElement.scrollTop || document.body.scrollTop==0 && e.detail> 0) { //当滑轮向上滚动时
+               timer2=setInterval('sup()',30);
+                clearInterval(timer2);
+            }
+            if (document.documentElement.scrollTop || document.body.scrollTop>=200 && e.detail< 0) { //当滑轮向下滚动时
+            clearInterval(timer);
+                 timer=setInterval('sd()',30);  
+            }
+        }
+}
+/*注册事件*/ 
+if(document.addEventListener){ 
+    document.addEventListener('DOMMouseScroll',scrolldown,false); 
+}//W3C 
+window.onmousewheel=document.onmousewheel=scrolldown;//IE/Opera/Chrome 
+</script>
+</body>
+</html>
