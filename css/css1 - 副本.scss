@@ -1,0 +1,521 @@
+body{
+  font-family:"Hiragino Sans GB", "Microsoft YaHei",
+"WenQuanYi Micro Hei", sans-serif;
+  box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+body,p,h1,h2{margin: 0;}
+ol,ul{list-style: none;margin: 0;padding: 0;}
+a{text-decoration:none;color: black;}
+@mixin box-size{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+@mixin displayflex{
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -o-flex;
+  display: -ms-flex;
+}
+@mixin displayinflex{
+  display: inline-flex;
+  display: -moz-inline-block;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+}
+@mixin transition2e{
+  transition: all ease-in .2s;
+  -o-transition: all ease-in .2s;
+  -moz-transition: all ease-in .2s;
+  -webkit-transition: all ease-in .2s;
+}
+@mixin boxshadow{box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;}
+@mixin br{
+  border-radius: 3px;
+  -webkit-border-radius: 3px ;
+  -moz-border-radius: 3px;
+}
+$s:0.2s;
+@mixin transition($s){
+  transition: all ease $s;
+  -o-transition: all ease $s;
+  -moz-transition: all ease $s;
+  -webkit-transition: all ease $s;
+}
+$red:rgba(235, 86, 72,1);
+$red-a:rgba(235,86,72,0.8);
+#header{
+  @include displayflex;
+  @include box-size;
+  z-index: 50;
+  background-color:rgb(255,255,255);
+  position: fixed;
+  width: 100%;height: 66px;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  align-items: center;
+  -webkit-align-items: center;
+  padding: 0 30px;
+  font-size: 14px;
+  @include transition(0.3s);
+  .header-left{
+    @include displayflex;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    align-items: center;
+    -webkit-align-items: center;
+    height: inherit;
+    .left-img{
+      height: 36px;width:193.172px;
+    }
+    .left-a{
+      margin-left: 30px;
+      .a-cn{
+        color:rgb(235, 86, 72);
+      }
+      .a-en{
+        color: rgb(125, 134, 149);
+        @include transition2e;
+        &:hover{color:black;@include transition2e;}
+      }
+    }
+  }
+
+  .header-right{
+    #headerul{
+      li{
+        @include displayinflex;
+        margin: 0 14px;
+        >a:not(.li-a-last){
+          color:rgb(125, 134, 149);
+          display: inline-block;position: relative;
+          &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            top:100%;
+            left: 50%;
+            margin-top: 7px;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            background-color:rgb(235, 86, 72);
+            height: 1px;width: 0;
+            @include transition2e;
+          }
+          &:hover{
+            color: black;
+            @include transition2e;
+            &:after{width: 100%;@include transition2e;}
+          }
+        }
+      }
+      li:last-of-type{
+        @include box-size;
+        background-color: rgb(235, 86, 72);
+        height: 40px;width: 120px;
+        border-radius: 2px;
+        -webkit-border-radius: 2px ;
+        -moz-border-radius: 2px;
+        @include transition2e;
+        .li-a-last{
+          @include displayinflex;
+          @include box-size;
+          line-height: 40px;
+          justify-content: center;
+          -webkit-justify-content: center;
+          color: white;
+          height: 40px;width: 120px;
+          box-shadow: rgba(235, 86, 72, 0.156863) 0px 6px 20px 0px;
+          -webkit-box-shadow: rgba(235, 86, 72, 0.156863) 0px 6px 20px 0px;
+          -moz-box-shadow: rgba(235, 86, 72, 0.156863) 0px 6px 20px 0px;
+          -o-box-shadow: rgba(235, 86, 72, 0.156863) 0px 6px 20px 0px;
+        }
+        &:hover{
+          background-color: rgba(235, 86, 72, 0.88);
+          @include transition(0.3s);
+        }
+      }
+    }
+  }
+}
+#bodyer{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+  margin-top: 66px;
+  #bodyer1{
+    background: url("https://modao.cc/webpack/sec1-bg.5ba3e982d843cda6e075536e168e2a63.svg") no-repeat 50% 100% ;
+    background-size: cover;
+    width: 100%;
+    height: 981px;
+    .content{
+      width: 572px;
+      height: 274px;
+      text-align: center;
+      margin: 0 auto;
+      h2{
+        line-height: 3rem;
+        font-weight: 300;
+        font-size: 2rem;
+      }
+      a{
+        @include displayinflex;
+        background-color: rgba(235, 86, 72,1);
+        margin-top: 25px;
+        height: 50px;
+        width: 160px;
+        line-height: 50px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px ;
+        -moz-border-radius: 3px;
+        color: white;
+        font-weight: 200;
+        justify-content: center;
+        -webkit-justify-content: center;
+        margin-bottom: 15px;
+        box-shadow:0 6px 20px 0 rgba(235,86,72,.16);
+        -o-box-shadow: 0 6px 20px 0 rgba(235,86,72,.16);
+        -moz-box-shadow:0 6px 20px 0 rgba(235,86,72,.16);
+        -webkit-box-shadow: 0 6px 20px 0 rgba(235,86,72,.16);
+        @include transition2e;
+        &:hover{
+          background-color: rgba(235, 86, 72, 0.8);
+          @include transition(0.5s);
+        }
+      }
+      .content-buttom{
+        width: inherit;
+        height: 64px;
+        h2{
+          font-weight: 200;
+          font-size: 0.86rem;
+          color:#a9afb8 ;
+        }
+        div{
+          width: inherit;
+          overflow: hidden;
+          height: 34px;
+        }
+      }
+    }
+    .video1{
+      display: block;
+      height: 545px;
+      .video1-img{
+        border-radius: 10px;
+        -webkit-border-radius: 10px ;
+        -moz-border-radius: 10px;
+        box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.25);
+        background-color: #c1c1c1;
+        width: 960px;
+        height: 545px;
+        margin: 30px auto 0 auto;
+        position: relative;
+        span{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background-color: #e1e1e1;
+          z-index: 3;
+          top: 0;
+          left: 0;
+          opacity: 0;
+          filter: alpha(opacity=0);
+          @include transition(0.5s)
+        }
+        &:hover span{
+          opacity: 0.3;
+          filter: alpha(opacity=30);
+          @include transition(0.5s);
+        }
+        &:hover .video1-btn{
+          background-color: rgba(235, 86, 72,1);
+          @include transition(0.5s)
+        }
+        &:hover .video1-btn:after{
+          content:'';
+          height: 0;
+          width: 0;
+          top: 49%;
+          border-top: 9px solid transparent;
+          border-left: 13px solid white;
+          border-bottom: 8.5px solid transparent;
+          z-index: 9;
+        }
+        .video1-btn{
+          width: 64px;
+          height: 64px;
+          position: absolute;
+          background-color: white;
+          border-radius: 32px;
+          -webkit-border-radius: 32px ;
+          -moz-border-radius: 32px;
+          left: 50%;
+          top: 50%;
+          z-index: 5;
+          -webkit-transform: translate(-30%,-45%);
+          -moz-transform: translate(-30%,-45%);
+          -o-transform: translate(-30%,-45%);
+          -ms-transform: translate(-30%,-45%);
+          transform: translate(-30%,-45%);
+          @include transition(0.5s);
+          &:after{
+            content: url("data:image/svg+xml;charset=utf-8,%3Csvg width='13' height='18' viewBox='0 0 13 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.462 8.868L.515 17.184V.55z' stroke='%23F55D54' fill='none'/%3E%3C/svg%3E");
+            position: absolute;
+            width: 13px;
+            height: 21px;
+            left: 50%;
+            top: 50%;
+            z-index: 2;
+            -webkit-transform: translate(-30%,-45%);
+            -moz-transform: translate(-30%,-45%);
+            -o-transform: translate(-30%,-45%);
+            -ms-transform: translate(-30%,-45%);
+            transform: translate(-30%,-45%);
+          }
+        }
+      }
+    }
+  }
+  #bodyer2{
+    background: url(https://modao.cc/webpack/sec2-bg.70d33ebdc020333a626b636611e4e203.svg) bottom no-repeat;
+    background-size: 100%;
+    background-color: $red;
+    background-position: 50% 90%;
+    color: white;
+    width: 100%;
+    height: 662px;
+    @include displayflex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    padding-top: 80px;
+    h2{
+      font-size: 2.5rem;
+      margin: 0 0 20px 0;
+      font-weight: 400;
+    }
+    p{
+      span{
+        font-size: 1.5rem;
+      }
+    }
+    .body2btn{
+      @include displayinflex;
+      color: $red;
+      background-color: white;;
+      width: 160px;
+      height: 50px;
+      line-height: 50px;
+      justify-content: center;
+      -webkit-justify-content: center;
+      cursor: pointer;
+      margin: 60px 0;
+      box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;
+      -o-box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;
+      -moz-box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 1px 0px, rgba(0, 0, 0, 0.0980392) 0px 6px 20px 0px;
+      @include transition(0.3s);
+      &:hover{
+        background-color: #f5d3d0;
+        @include transition(0.3s);
+      }
+    }
+    .body2btn-p{
+      margin-top: 42px;
+      opacity: 0.75;
+      filter:alpha(opacity=75);
+    }
+  }
+  #bodyer3 {
+    @include displayflex;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
+    -webkit-align-items: center;
+    padding-top: 20px;
+    .mould {
+      background-color: #fafafa;
+      width: 96%;
+      max-width: 1420px;
+      height: 640px;;
+      margin-bottom: 20px;
+    }
+    .left-style {}
+    .right-style{}
+    .bodyer3-1 {
+      @include displayflex;
+      @include box-size;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      align-items: center;
+      -webkit-align-items: center;
+      padding: 0 96px;
+      .content {
+        min-width: 300px;
+        width: 100%;
+        max-width: 392px;
+        height: 353px;
+        h2 {
+          color: #27364e;
+          font-size: 28px;
+          font-weight: 400;
+          margin-bottom: 28px;
+          &:before {
+            content: '';
+            display: block;
+            background: url(https://modao.cc/webpack/asset.4e3d36887976d12a68649d74140b9af6.svg) no-repeat;
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: 16px;
+          }
+        }
+        p {
+          line-height: 23.8px;
+          font-size: 0.875rem;
+          color: #27364e;
+          margin: 14px 0;
+          a {
+            color: #eb5648;
+          }
+        }
+        div {
+          p {
+            line-height: 23.8px;
+            color: #969da8;
+            margin-bottom: 14px;
+            &:before {
+              content: "\300C";
+            }
+            &:after {
+              content: "\300D";
+            }
+          }
+          footer {
+            b {
+              color: #969da8;
+              font-size: 0.875rem;
+              font-weight: 400;
+              position: relative;
+              top: -0.5rem;
+              &:before {
+                content: '';
+                display: inline-block;
+                overflow: hidden;
+                position: relative;
+                top: 0.5rem;
+                left: -0.1rem;
+                width: 2rem;
+                height: 2rem;
+                background: url(https://modao.cc/webpack/people.340ca6319aeead12118da19222e54270.png) no-repeat;
+                -webkit-background-size: 230px auto;
+                -moz-background-size: 230px auto;
+                background-size: 230px auto;
+                background-position: 0 -135px;
+              }
+            }
+          }
+        }
+
+      }
+      .picture {
+        display: block;
+        position: relative;
+        @include br;
+        @include boxshadow;
+        .img2 {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          filter: drop-shadow(0 6px 20px rgba(0, 0, 0, .15));
+        }
+      }
+    }
+  }
+}
+#scroll-bar{
+  position: fixed;
+  background-color: rgb(255,255,255);
+  right: 0;
+  width: 12px;
+  height: 100%;
+  z-index: 100;
+  #bar-top{
+    width: 12px;
+  }
+  #bar-centre{
+    width: 12px;
+    background-color:#c1c1c1;
+    opacity: 0.8;
+    filter:alpha(opacity=80);
+    position: absolute;
+    cursor: pointer;
+    &:hover{
+      opacity: .6;
+      filter:alpha(opacity=60);
+      @include transition(0.3s);
+    }
+  }
+  #bar-buttom{
+    width: 12px;
+    flex-grow: 1;
+    -webkit-flex-grow: 1;
+  }
+}
+#btn{
+  @include box-size;
+  z-index: 99;
+  width:40px;height:40px;
+  border: 2px solid #f55d54;
+  position:fixed;
+  top: 82%;
+  left:92%;
+  cursor: pointer;
+  border-radius: 40px;
+  -webkit-border-radius: 40px ;
+  -moz-border-radius: 40px;
+  box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.25);
+  &:hover{
+    background-color: #f55d54;
+    @include transition(0.3s);
+    &::after{
+      color: white;
+      @include transition(0.3s);
+    }
+  }
+  &::after{
+    content: "\27A4";
+    transform:rotate(-90deg);
+    text-align: center;
+    color: #f55d54;
+    font-size: 1.5rem;
+    width: 38px;height: 38px;
+    position: absolute;
+    left: 1px;
+    top: -3px;
+  }
+}
+.noselect{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.headerbuttom{
+  box-shadow:rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
+  -o-box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
+  -moz-box-shadow:rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0470588) 0px 1px 1px 0px;
+}

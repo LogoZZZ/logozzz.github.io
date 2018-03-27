@@ -5,54 +5,175 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-    body{font-family: Arial, Helvetica, sans-serif;background:url('img/bg_menu.png');width: 100%;overflow: hidden;}
-
-    body,p,h1{margin: 0;}
-    ol,ul{list-style: none;margin: 0;padding: 0;}
-    a{text-decoration:none;}
-
-    #header{position: fixed;z-index: 8;top: 9%;left: 10%;}
-    #header ul li a{color: rgba(255, 255, 255, 0.877);font-size: 24px;display: block;width: 77px;height: 50px;text-align: center;line-height: 50px;margin-top: 6px;border-bottom: 2px solid rgba(94, 94, 94, 0.432);}
-    #header ul li a:hover{border-bottom: 2px solid rgba(255, 255, 255, 0.877);}
-
-    #bodyer{width: 100%;height: 100%;}
-    #bodyer #overall{background:url('img/pattern.png') repeat fixed top;width: 100%;height:100%;position: fixed;}
-    
-    #footer{width: 100%;height: 30px;position: fixed;bottom: 0;z-index: 9;
-    background:url('img/bg_menu.png');
-    }
-    #footer .footer-a{
-        margin: 7px;
-        color: rgba(255, 255, 255, 0.616);
-    }
-    #footer .footer-a:hover{
-        color: rgba(255, 255, 255, 0.877);
-    }
-    #footer #footer-left{float: left;}
-    #footer #footer-right{float: right;}
-    #footer .a-cont{position: absolute;right: 45%;}
-    </style>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+    <!--<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>-->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script src="http://www.jq22.com/jquery/html5.min.js"></script>
+    <!-- html5 for ie -->
+    <!--<link rel="stylesheet" type="text/css" href="https://www.jq22.com/jquery/animate-3.6.0.min.css">-->
+    <link type="text/css" href="css/css1.css" rel="stylesheet">
+    <script src="js/respond.min.js"></script>
 </head>
 <body>
     <div id="header">
-        <ul>
-            <li><a href="javascript:0;">Log</a> <span></span> </li>
-            <li><a href="javascript:0;">Blog</a> <span> </span> </li>
-            <li><a href="javascript:0;">About</a> <span></span> </li>
-        </ul>
+        <div class="header-left">
+            <h1 class="left-img">
+                <a href="/">
+                    <img src="img/logo-h.svg" alt="logo">
+                </a>
+            </h1>
+
+            <div class="left-a">
+                <a href="/" class="a-cn">中文&nbsp;</a>
+                <span style="color:rgb(125, 134, 149);">/</span>
+                <a href="/" class="a-en">&nbsp;EN</a>
+            </div>
+
+        </div>
+
+        <div class="header-right">
+            <ul id="headerul">
+                <li><a href="javascript:0">功能概览</a></li>
+                <li><a href="javascript:0">下载</a></li>
+                <li><a href="javascript:0">价格</a></li>
+                <li><a href="javascript:0">教程</a></li>
+                <li><a href="javascript:0">讨论区</a></li>
+                <li><a href="javascript:0">登录</a></li>
+                <li><a href="javascript:0" class="li-a-last">免费注册</a></li>
+            </ul>
+        </div>
     </div>
 
     <div id="bodyer">
-            <div id="overall"></div>
-            <img src="img/a11.jpg" alt="bgimg" width="100%" >
+        <div id="bodyer1">
+            <div class="content">
+                <h2>全新墨刀 v3.0</h2>
+                <h2>
+                    强大易用的原型设计与协同工具
+                </h2>
+                <a class="content-button" href="javascript:0">立即使用</a>
+
+                <div class="content-buttom">
+                    <h2>各平台口碑推荐第一</h2>
+                    <div>
+                        <img src="img/platforms.4950880936aad3232a4046dc53599e04.png" width="572px" height="34px" alt="/">
+                    </div>
+                </div>
+            </div>
+            <div class="video1">
+                <div class="video1-img">
+                    <a href="javascript:0"><img src="img/workspace@1x.png" alt="1x"width="960px"height="545px"><span></span></a>
+                    <div class="video1-btn"></div>
+                </div>
+            </div>
+        </div>
+        <div id="bodyer2">
+            <h2>和他们一起使用墨刀</h2>
+            <p> <span>30,000+</span> 的产品设计团队共同选择，
+                <span>50,000+</span> 的实时协同项目</p>
+            <div class="body2btn">立即体验</div>
+            <div class="body2img"><img src="img/join-them.png" width="768px" height="180px" ></div>
+            <p class="body2btn-p">顶级互联网公司的共同选择</p>
+        </div>
+        <div id="bodyer3">
+            <div class="bodyer3-1 mould mould-style">
+                <div class="content">
+                    <h2>简单易用的原型设计工具</h2>
+                    <p>无论是 PM 从 0 到 1 绘制原型、还是设计师导入设计稿制作交互，都可以快速轻松完成可交互原型。<br><a href="javascript:0">新增平台组件，让工作事半功倍。</a></p>
+                    <div>
+                        <p>墨刀的出现，就是节约了沟通的成本，降低了试错成本，优化了设计的效率！让看不见的价值，更快速地用可见的方式表达。让革新者有新的方法去改变世界。</p>
+                        <footer><b>王心磊，Ark Design 联合创始人</b></footer>
+                    </div>
+                </div>
+                <div class="picture"><img class='img1' src="img/sec3.png" width="650px" height="376px"><img class="img2" src="img/sec3-em.png" width="650px" height="423px"></div>
+            </div>
+            <div class="bodyer3-2 mould mould-style">
+                <div class="picture"><img class="img1" src="img/sec4.png" width="650px" height="461px"></div>
+                <div class="content">
+                    <h2>多种设备完美演示</h2>
+                    <p>你可以将你的作品分享给任何人，无论在 PC、手机或微信上，他们都能随时查看最新版本。</p>
+                    <div>
+                        <p>快速生成高保真原型，在原型阶段得到产品反馈，为我们节约开发成本，它已经成为我们梅沙科技的必备工具。</p>
+                        <footer><b>BLUES，梅沙科技创始人，原迅雷产品总监</b></footer>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyer3-3 mould mould-style">
+                <div class="content">
+                    <h2>工作流文档生成，关注产品全局</h2>
+                    <p>开发人员可告别复杂的需求文档，打开工作流便可看到全局状态和注释，实时同步进度和文档——工作流成为最有效的沟通语言。</p>
+                    <div>
+                        <p>针对移动应用，可以做出像开发完成的应用一样的原型。产品方案验证和演示的时候，工作流极大地减少了沟通和时间成本。</p>
+                        <footer><b>唐杰，《杰出产品经理》作者</b></footer>
+                    </div>
+                </div>
+                <div class="picture"><img class='img1' src="img/sec5.png" width="650px" height="376px"><img class="img2" src="img/sec5-em.png" width="650px" height="423px"></div>
+            </div>
+            <div class="bodyer3-4 mould mould-style">
+                <div class="picture"><img class='img1' src="img/sec6.png" width="650px" height="370px"><img class="img2" src="img/sec6-em.png" width="650px" height="429px"></div>
+                <div class="content">
+                    <h2>在线团队协同，多人聚焦讨论</h2>
+                    <p>产品细节、新增需求、打点评论清晰可见。制作者可以第一时间收到细节反馈，方便意见的统一修改。</p>
+                    <div>
+                        <p>我们成员在美国洛杉矶、英国曼彻斯特、上海、北京，但丝毫不影响协作办公。我们用墨刀做产品原型和客户沟通更改。我们的工作就是把客户在打点讨论中的需求用最友好的方式展示出来。</p>
+                        <footer><b>Sigh，设计咨询与创意制作公司</b></footer>
+                    </div>
+                </div>
+            </div>
+            <div class="bodyer3-5 mould mould-style">
+                <div class="content">
+                    <h2>Sketch + 墨刀 = 交互批注利器</h2>
+                    <p>将 Sketch 的设计稿一键导入墨刀即可马上制作交互，工程师还可以通过开发者模式，看到完整的图层信息。</p>
+                    <div>
+                        <p>墨刀 Sketch 插件极大程度地提升了我们的工作效率，让我们可以一键导入设计稿，几分钟内轻松制作出可跳转的交互原型</p>
+                        <footer><b>徐楚童，Rational Design 联合创始人</b></footer>
+                    </div>
+                    <a href="javascript:0">查看详情</a>
+                </div>
+                <div class="picture"><img class='img1' src="img/sec7.png" width="650px" height="367px"><img class="img2" src="img/sec7-em.png" width="745px" height="423px" style="top: 10px;left: -100px;"></div>
+            </div>
+
+            <div class="bodyer3-6 mould" style="height: 656px;">
+                <h2>为你提供产品设计的一切可能</h2>
+                <p>让原型制作变得更简单</p>
+                <div class="bodyer3-6-divimg">
+                    <span class="divimg1 spanMould">
+                        <h2>素材库</h2>
+                        <p>精心设计的平台组件库<br>丰富的行业模板库和图标库</p>
+                    </span>
+                    <span class="divimg2 spanMould">
+                        <h2>多格式下载</h2>
+                        <p>支持 PNG／HTML／APK／IPA<br>及切片下载</p>
+                    </span>
+                    <span class="divimg3 spanMould">
+                        <h2>云存储／云管理</h2>
+                        <p>专享 AWS 加密云服务<br>保障项目安全</p>
+                    </span>
+                </div>
+            </div>
+            <div class="bodyer3-7" style="height: 892px">
+                <div class="video2">
+                    <div class="video2-img">
+                        <a href="javascript:0"><img src="img/elsewhere.jpg"width="100%"><span></span></a>
+                        <div class="video2-btn"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bodyer3-8">
+            <h2>现在就使用墨刀，开始无忧创作</h2>
+            <p>和全球 <b>153</b> 个国家，<b>80</b> 万用户一起享受设计新方式</p>
+            </div>
+        </div>
     </div>
 
-    <div id="footer">
-        <a id="footer-left" class="footer-a" href="javascript:0;"> < <&nbsp; NEW LOG</a>
-        <a class="a-cont footer-a" href="http://www.zyjlog.com"> www.zyjlog.com</a>
-        <a id="footer-right" class="footer-a"href="javascript:0;">NEW BLOG &nbsp;> ></a>
+    <div id="scroll-bar">
+        <div id="bar-top"></div>
+        <div id="bar-centre"></div>
+        <div id="bar-buttom"></div>
     </div>
+    <div id="btn" style="display: none;"></div>
 
+    <script src="js/indexjs.js"></script>
 </body>
 </html>
