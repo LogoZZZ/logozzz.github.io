@@ -1,5 +1,5 @@
 body {
-  font-family: "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Pingfang SC,Microsoft Yahei,WenQuanYi Micro Hei,sans-serif;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
@@ -7,7 +7,7 @@ body {
 body, p, h1, h2 {
   margin: 0; }
 
-ol, ul {
+ol, ul, button {
   list-style: none;
   margin: 0;
   padding: 0; }
@@ -150,13 +150,18 @@ a {
       -moz-transition: all ease 0.3s;
       -webkit-transition: all ease 0.3s; }
 
-#bodyer {
+#bodyer-bottom {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: fixed;
+  position: fixed; }
+
+#bodyer {
+  width: 100%;
+  position: absolute;
   z-index: 1;
-  margin-top: 66px; }
+  margin-top: 66px;
+  transform: translateY(1px); }
   #bodyer #bodyer1 {
     background: url("https://modao.cc/webpack/sec1-bg.5ba3e982d843cda6e075536e168e2a63.svg") no-repeat 50% 100%;
     background-size: cover;
@@ -305,6 +310,7 @@ a {
     color: white;
     width: 100%;
     height: 662px;
+    margin-top: -1px;
     display: flex;
     display: -moz-flex;
     display: -webkit-flex;
@@ -681,6 +687,135 @@ a {
               -o-transform: translate(-30%, -45%);
               -ms-transform: translate(-30%, -45%);
               transform: translate(-30%, -45%); }
+      #bodyer #bodyer3 .bodyer3-7 #quote-list {
+        display: flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -o-flex;
+        display: -ms-flex;
+        justify-content: center;
+        -webkit-justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        width: 100%;
+        height: 299px;
+        position: relative; }
+        #bodyer #bodyer3 .bodyer3-7 #quote-list #message {
+          display: block;
+          width: 736px;
+          height: 240px;
+          background-color: white;
+          position: absolute;
+          top: -11rem;
+          left: 50%;
+          z-index: 80;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          -ms-transform: translateX(-50%);
+          -o-transform: translateX(-50%);
+          transform: translateX(-50%);
+          color: #525e71;
+          filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15)); }
+          #bodyer #bodyer3 .bodyer3-7 #quote-list #message h2 {
+            font-size: 1.25rem;
+            border-bottom: 1px solid #d9d9d9;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            height: 50px;
+            text-align: center;
+            padding: 30px 0 0; }
+          #bodyer #bodyer3 .bodyer3-7 #quote-list #message p {
+            font-size: 20px;
+            font-weight: 300;
+            text-align: center;
+            color: #525e71;
+            width: 537px;
+            margin: 0 auto;
+            padding-top: 40px; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list #message p:before {
+              content: "\300C"; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list #message p:after {
+              content: "\300D"; }
+          #bodyer #bodyer3 .bodyer3-7 #quote-list #message #message-span {
+            display: block;
+            position: absolute;
+            border-top: 20px solid white;
+            border-left: 16px solid transparent;
+            border-right: 16px solid transparent;
+            z-index: 98;
+            top: 98%;
+            left: 42px; }
+        #bodyer #bodyer3 .bodyer3-7 #quote-list ul {
+          width: 737px;
+          height: 123px; }
+          #bodyer #bodyer3 .bodyer3-7 #quote-list ul .active {
+            opacity: 1;
+            filter: alpha(opacity=100); }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul .active button:before {
+              box-shadow: 0 0 0 1px #eb5648;
+              -webkit-box-shadow: 0 0 0 1px #eb5648; }
+          #bodyer #bodyer3 .bodyer3-7 #quote-list ul li {
+            display: inline-block;
+            width: 16%;
+            height: 123px;
+            text-align: center;
+            background-color: transparent;
+            opacity: 0.7;
+            filter: alpha(opacity=70);
+            transition: all ease-in .2s;
+            -o-transition: all ease-in .2s;
+            -moz-transition: all ease-in .2s;
+            -webkit-transition: all ease-in .2s; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li:hover {
+              opacity: 1;
+              filter: alpha(opacity=100); }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li button {
+              display: block;
+              color: #525e71;
+              font-size: 14px;
+              width: 84px;
+              height: 102px;
+              margin: 0 auto;
+              outline: none;
+              -webkit-appearance: none;
+              background-color: transparent;
+              cursor: pointer;
+              border: none; }
+              #bodyer #bodyer3 .bodyer3-7 #quote-list ul li button:before {
+                content: '';
+                display: block;
+                border: 3px solid #fff;
+                margin: 0 auto 1rem;
+                width: 61px;
+                height: 61px;
+                background: url(https://modao.cc/webpack/people.340ca6319aeead12118da19222e54270.png) no-repeat;
+                background-size: 230px auto;
+                -o-background-size: 230px auto;
+                -moz-background-size: 230px auto;
+                -webkit-background-size: 230px auto;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%; }
+              #bodyer #bodyer3 .bodyer3-7 #quote-list ul li button:hover:before {
+                box-shadow: 0 0 0 1px #eb5648;
+                -webkit-box-shadow: 0 0 0 1px #eb5648; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li p {
+              color: #525e71;
+              font-size: 14px; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li .fanyang:before {
+              background-position: -102px -2px; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li .maqiao:before {
+              background-position: -67px -67px; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li .zhubo:before {
+              background-position: -167px -102px; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li .adelaide:before {
+              background-position: -2px -2px; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li .wumian:before {
+              background-position: -167px -2px; }
+            #bodyer #bodyer3 .bodyer3-7 #quote-list ul li .jason:before {
+              background-position: -2px -67px; }
     #bodyer #bodyer3 .bodyer3-8 {
       display: flex;
       display: -moz-flex;
@@ -698,7 +833,96 @@ a {
       -webkit-background-size: 8px auto;
       -moz-background-size: 8px auto;
       background-size: 8px auto;
-      background-position: bottom; }
+      background-position: bottom;
+      padding: 5rem 0; }
+      #bodyer #bodyer3 .bodyer3-8 h2 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #27364e; }
+      #bodyer #bodyer3 .bodyer3-8 p {
+        color: #27364e;
+        font-size: 0.875rem;
+        margin: 14px 0; }
+        #bodyer #bodyer3 .bodyer3-8 p b {
+          font-weight: 400;
+          color: #eb5648;
+          font-size: 14px; }
+      #bodyer #bodyer3 .bodyer3-8 form {
+        width: 384px;
+        height: 416px;
+        display: flex;
+        display: -moz-flex;
+        display: -webkit-flex;
+        display: -o-flex;
+        display: -ms-flex;
+        background-color: white;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        margin: 3rem auto 0;
+        padding: 3rem 1em 0;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        -o-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.15); }
+        #bodyer #bodyer3 .bodyer3-8 form label {
+          display: block;
+          margin: 28px 0 0;
+          color: #27364e; }
+          #bodyer #bodyer3 .bodyer3-8 form label input {
+            box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            font-size: 14px;
+            width: 252px;
+            height: 32px;
+            -webkit-appearance: none;
+            border-radius: 0;
+            -moz-border-radius: 0;
+            -webkit-border-radius: 0;
+            border: none;
+            border-bottom: 1px solid #d9d9d9;
+            padding: 0 .5rem 0 2rem;
+            outline: none; }
+            #bodyer #bodyer3 .bodyer3-8 form label input:focus {
+              border-bottom: 1px solid #eb5648; }
+            #bodyer #bodyer3 .bodyer3-8 form label input:hover {
+              border-bottom: 1px solid #eb5648; }
+        #bodyer #bodyer3 .bodyer3-8 form button {
+          font-size: 14px;
+          display: block;
+          outline: none;
+          -webkit-appearance: none;
+          border-radius: 0;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0;
+          width: 252px;
+          height: 50px;
+          margin: 44px 0 16px;
+          background-color: #eb5648;
+          color: white;
+          text-align: center;
+          line-height: 100%;
+          border: none;
+          cursor: pointer;
+          transition: all ease-in .2s;
+          -o-transition: all ease-in .2s;
+          -moz-transition: all ease-in .2s;
+          -webkit-transition: all ease-in .2s; }
+          #bodyer #bodyer3 .bodyer3-8 form button:hover {
+            background-color: rgba(235, 86, 72, 0.8);
+            transition: all ease-in .2s;
+            -o-transition: all ease-in .2s;
+            -moz-transition: all ease-in .2s;
+            -webkit-transition: all ease-in .2s; }
+        #bodyer #bodyer3 .bodyer3-8 form p {
+          margin: 14px 0;
+          color: #a9afb8; }
+          #bodyer #bodyer3 .bodyer3-8 form p a {
+            color: #eb5648;
+            border-bottom: 1px solid #eb5648; }
 
 #scroll-bar {
   position: fixed;
