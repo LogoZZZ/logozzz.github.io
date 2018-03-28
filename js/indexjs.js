@@ -28,14 +28,16 @@
         _bodyer.style['-webkit-transform']='translateY('+rel+'px)';
         _bodyer.style['-o-transform']='translateY('+rel+'px)';
     }//赋值
-    var _ht=0,_wt,_stimer1=null;
+    var _ht=0,_wt;
     function _mouseMove(rel) {
-        wt=_ddCheight-parseInt(_barCentre.style.height);
+        _wt=_ddCheight-parseInt(_barCentre.style.height);
         _ht=_ht-rel;
-        if(_ht<=2){
-            _topReH();rel=0
-        }else if(_ht>wt){
-            _topReH();rel=0;
+        if(_ht<=0){
+            _ht=0;rel=0;
+            _transYend=0;
+        }else if(_ht>_wt){
+            _ht=_wt;rel=0;
+            _transYend=_bodyerHeight/_ddCheight*-_ht;
         }
         _barTop.style.height=_ht+'px';
         _transYend=_transYend+(_bodyerHeight/_ddCheight)*rel;
@@ -57,7 +59,6 @@
             if(__i==1000){
                 _transformVule(_transYend);
                 clearInterval(_timer1);
-                clearTimeout(_stimer1);
             }
         },5)
     }
@@ -130,11 +131,27 @@
         }
     }
 function _run() {
+        var __i=0;
     _timer2=setInterval(function () {
-
-    })
+        __i+=10;
+        _transYend=_transYend-_transYend/20;
+        _tranZ=_transYend-_transYstart;
+        _transYstart=_transYstart+_tranZ/15;
+        _transformVule(_transYstart);
+        _ht=_ddCheight/_bodyerHeight*-_transYend;
+        _barTop.style.height=_ht+'px';
+        if(__i==1500){
+            _ht=0;
+            _barTop.style.height=_ht+'px';
+            _transYend=0;_transYstart=0;
+            _transformVule(_transYend);
+            _showBtn();
+            clearInterval(_timer2);
+        }
+    },10)
 }
     _btn.addEventListener('click',function () {
+        clearInterval(_timer2);
         _run();
     });
 

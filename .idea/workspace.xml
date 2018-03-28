@@ -95,8 +95,8 @@
           <file leaf-file-name="indexjs.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/indexjs.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="475">
-                  <caret line="40" column="50" lean-forward="false" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+                <state relative-caret-position="175">
+                  <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="47" />
                   <folding />
                 </state>
               </provider>
@@ -134,8 +134,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="827" />
-    <option name="y" value="62" />
+    <option name="x" value="328" />
+    <option name="y" value="98" />
     <option name="width" value="1769" />
     <option name="height" value="872" />
   </component>
@@ -236,16 +236,15 @@
       <workItem from="1522071848492" duration="5636000" />
       <workItem from="1522112326040" duration="30159000" />
       <workItem from="1522164744172" duration="7847000" />
-      <workItem from="1522203884426" duration="31122000" />
+      <workItem from="1522203884426" duration="34065000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131464000" />
+    <option name="totallyTimeSpent" value="134407000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="827" y="62" width="1769" height="872" extended-state="0" />
-    <editor active="true" />
+    <frame x="328" y="98" width="1769" height="872" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3784933" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -859,8 +858,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/indexjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="40" column="50" lean-forward="false" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        <state relative-caret-position="175">
+          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="47" />
           <folding />
         </state>
       </provider>
