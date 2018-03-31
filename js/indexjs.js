@@ -41,7 +41,7 @@
         }
         _barTop.style.height=_ht+'px';
         _transYend=_transYend+(_bodyerHeight/_ddCheight)*rel;
-
+        sessionStorage.transYstart=_transYend;
     }
     function _topReH() {
         _ht=_ddCheight/_bodyerHeight*-_transYend;
@@ -192,4 +192,10 @@ function _run() {
         }
     })
     //通过事件委派完成功能实现
+
+    var _onload=function() {
+        _transYend=sessionStorage.transYstart||0;
+        _topReH();
+    };
+    _onload();
 }());
